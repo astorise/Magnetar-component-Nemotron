@@ -1,0 +1,19 @@
+name: Nemotron reference integration
+
+on:
+  pull_request:
+  push:
+    branches: [claude/charming-lamport-1b9m74]
+
+permissions:
+  contents: read
+
+jobs:
+  checkpoint-layout-and-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Install Rust toolchain
+        run: rustup toolchain install 1.100.0 --profile minimal
+      - name: Test layout and independent PyTorch recurrence reference
+        run: cargo +1.100.0 test --locked --test layout_integration --test mamba2_integration

@@ -12,11 +12,22 @@ or Devices).
 
 ## Status
 
-**Empty template.** This crate is a scaffold: no Nemotron graph logic, no WIT
-bindings and no Component Model exports exist here yet, and the Runtime has
-no Nemotron implementation of its own either. It is pinned into Magnetar as a
-placeholder so the work has a home; it is not yet scheduled against an
-OpenSpec change of its own.
+The Rust library validates a Nemotron-H hybrid layer pattern and implements a
+standalone float32 reference for the cached Mamba-2 selective-state recurrence.
+The recurrence is tested across three consecutive steps against the upstream
+PyTorch decode branch, including grouped heads, nonzero initial state, time
+step clamping and the learned D skip. Its input is already convolved and
+projected: causal convolution, gated normalization, model graph production,
+weights, WIT exports and complete inference are not implemented. No Nemotron
+checkpoint is yet runnable in Magnetar through this component.
+
+The parser recognizes `M` (Mamba-2), `*` (attention), `-` (dense MLP) and
+`E` (MoE), and tests the factual 52-layer layout of NVIDIA's Nemotron-3 Nano
+checkpoint. At the cited revision, that checkpoint's pattern contains `E`,
+although its bundled `configuration_nemotron_h.py` appears to exclude `E` in
+its pattern validation. NVIDIA's model code has an MoE branch and a newer
+NVIDIA configuration explicitly maps `E` to MoE. Parsing the published layout
+here does not claim that this upstream configuration loads successfully.
 
 ## What this family needs
 
@@ -31,7 +42,11 @@ implemented:
 
 ## Governing contract
 
-None dedicated yet. A real implementation will target the same
+The shared state, graph and Reference CPU work required for Nemotron-H Mamba-2
+is tracked in [Magnetar #223](https://github.com/astorise/Magnetar/issues/223).
+Its grouped and biased expert routing also depends on
+[Magnetar #198](https://github.com/astorise/Magnetar/issues/198) and
+[#216](https://github.com/astorise/Magnetar/issues/216). A real component will target the same
 `model-component-graph-contract` WIT interface (`magnetar:model-component-graph`)
 `components/qwen` and `components/llama` implement, extended additively
 where this family needs Operators or state the contract does not model yet.
