@@ -1,18 +1,10 @@
-//! NVIDIA Nemotron Model Component for the Magnetar local AI Runtime.
+//! Initial Nemotron-H model component support.
 //!
-//! An empty template: no graph logic and no Component Model exports yet.
-//! See the README for what this family needs from the Runtime before a
-//! real implementation of `magnetar:model-component-graph` can be written.
+//! The layout parser and standalone Mamba-2 recurrence reference are not yet
+//! connected to graph exports or a runnable Magnetar inference pipeline.
 
-/// The architecture family this Component will serve.
+pub mod layout;
+pub mod mamba2;
+
+/// Project-level family label; Hugging Face Nemotron-H uses `nemotron_h`.
 pub const ARCHITECTURE_FAMILY: &str = "nemotron";
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn names_its_architecture_family() {
-        assert_eq!(ARCHITECTURE_FAMILY, "nemotron");
-    }
-}
