@@ -21,6 +21,13 @@ states, reset and failure rollback. The mixer remains a standalone reference:
 model graph production, checkpoint loading, WIT exports and complete inference
 are not implemented. No Nemotron checkpoint is yet runnable in Magnetar.
 
+For the pinned Nano configuration, the library also plans the portable f32
+Mamba-2 mixer's input/output shapes and checkpoint weight transformations. Its
+layer-0 weight names, shapes and mixed BF16/F32 dtypes were checked against
+the real Safetensors header. Initialization time-step bounds are kept distinct
+from inference clamping; the pinned default scan has no upper clamp. This plan
+does not load weights or qualify BF16 execution.
+
 The parser recognizes `M` (Mamba-2), `*` (attention), `-` (dense MLP) and
 `E` (MoE), and tests the factual 52-layer layout of NVIDIA's Nemotron-3 Nano
 checkpoint. At the cited revision, that checkpoint's pattern contains `E`,
