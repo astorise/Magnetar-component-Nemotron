@@ -23,8 +23,8 @@ are not implemented. No Nemotron checkpoint is yet runnable in Magnetar.
 
 For the pinned Nano configuration, the library also plans the portable f32
 Mamba-2 mixer's input/output shapes and checkpoint weight transformations. Its
-layer-0 weight names, shapes and mixed BF16/F32 dtypes were checked against
-the real Safetensors header. Initialization time-step bounds are kept distinct
+weight names, shapes and mixed BF16/F32 dtypes were checked for all 23 Mamba
+layers against 12 real Safetensors headers. Initialization time-step bounds are kept distinct
 from inference clamping; the pinned default scan has no upper clamp. This plan
 does not load weights or qualify BF16 execution.
 

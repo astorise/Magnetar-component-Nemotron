@@ -33,18 +33,24 @@ fn pinned_nano_mixer_shapes_match_real_safetensors_header() {
         vec![vec![7, 2688], vec![6144, 4], vec![64, 64, 128]]
     );
     let header: Value =
-        serde_json::from_str(include_str!("fixtures/nano-mamba2-header.json")).unwrap();
-    assert_eq!(plan.weights.len(), header.as_object().unwrap().len());
-    for spec in &plan.weights {
-        let actual = &header[&spec.checkpoint_name];
-        assert_eq!(actual["dtype"].as_str().unwrap(), spec.checkpoint_dtype);
-        let shape: Vec<usize> = actual["shape"]
-            .as_array()
-            .unwrap()
-            .iter()
-            .map(|dimension| dimension.as_u64().unwrap() as usize)
-            .collect();
-        assert_eq!(shape, spec.checkpoint_shape, "{}", spec.checkpoint_name);
+        serde_json::from_str(include_str!("fixtures/nano-mamba2-headers.json")).unwrap();
+    let tensors = &header["tensors"];
+    assert_eq!(
+        profile.layers.len() * plan.weights.len(),
+        tensors.as_object().unwrap().len()
+    );
+    for &layer in &profile.layers {
+        for spec in &profile.invocation(layer, 1).unwrap().weights {
+            let actual = &tensors[&spec.checkpoint_name];
+            assert_eq!(actual["dtype"].as_str().unwrap(), spec.checkpoint_dtype);
+            let shape: Vec<usize> = actual["shape"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|dimension| dimension.as_u64().unwrap() as usize)
+                .collect();
+            assert_eq!(shape, spec.checkpoint_shape, "{}", spec.checkpoint_name);
+        }
     }
     assert_eq!(plan.weights[0].transform, WeightTransform::Transpose);
     assert_eq!(plan.weights[0].operator_shape, [2688, 10304]);

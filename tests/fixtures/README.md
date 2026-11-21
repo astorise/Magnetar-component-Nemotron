@@ -49,15 +49,15 @@ The fixture does not redistribute that checkpoint's weights.
 
 `nano-config.json` is the published configuration at that revision (SHA-256
 `dd9fa380ac107b0477db5a26108db9febe6378e7bb3966a107944853ec4f76f8`).
-`nano-mamba2-header.json` records only the names, shapes and dtypes of the
-eight layer-0 mixer tensors from the first Safetensors shard; it contains no
-weight data or offsets. The source header was read with HTTP byte ranges; its
-55,432 JSON bytes have SHA-256
-`77a5f9ac2281aacc2209e622c4dbabb1d1cb78d76796055a765729e868165579`.
+`nano-mamba2-headers.json` records only the names, shapes and dtypes of the
+184 mixer tensors for all 23 Mamba layers; it contains no weight data or
+offsets. The 12 source headers were read with HTTP byte ranges, and their
+individual SHA-256 hashes are recorded in the fixture. The first header's
+55,432 JSON bytes hash to `77a5f9ac2281aacc2209e622c4dbabb1d1cb78d76796055a765729e868165579`.
 The index, model code above and
 [`configuration_nemotron_h.py`](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/fe4143e388795a58a92974891b2e45092a53dc1d/configuration_nemotron_h.py)
 (SHA-256 `09a3179517667d302068c2f8c96c9f059297418a829bf3cb96273040563b955c`)
 are the sources for these shapes and the default inference time-step limits.
 The config's `time_step_min` and `time_step_max` govern initialization;
-the inference scan defaults to `(0, infinity)`. BF16 execution, other shards,
-and loading or running the published checkpoint are not qualified by this test.
+the inference scan defaults to `(0, infinity)`. BF16 execution and loading
+or running the published checkpoint are not qualified by this test.

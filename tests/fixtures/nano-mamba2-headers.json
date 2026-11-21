@@ -1,0 +1,1214 @@
+{
+  "sha256_of_raw_headers": {
+    "model-00001-of-00013.safetensors": "77a5f9ac2281aacc2209e622c4dbabb1d1cb78d76796055a765729e868165579",
+    "model-00002-of-00013.safetensors": "4e92047ab276e1137add544bc0efe154750bc92ed9d11755f6edc66968b3e9ab",
+    "model-00003-of-00013.safetensors": "674bb569b412d1dd030eca99fdf53f6d1d778d583617231aa81a14daa6b639a7",
+    "model-00004-of-00013.safetensors": "3dd7b425d03f6647e28930f3e5b39f86170bd9f59ba927b40d25ae848c0ac18f",
+    "model-00005-of-00013.safetensors": "12905f720bf9834c01a9b3b441c57b34808519ff75f53efdfc269d7345832420",
+    "model-00006-of-00013.safetensors": "6dfc38dd10f4b2f50e64e5dd2155106da47802ab8554a44654b7f0e9ebe06fb4",
+    "model-00007-of-00013.safetensors": "061c59038b395f37065e78c4d63f95473338df5f29f9c084976c609a3885c6ea",
+    "model-00008-of-00013.safetensors": "d43fbe69cee1c08d9c06345c4b5b7e932dd302a9b1a7a762728a4f91e27d63ff",
+    "model-00009-of-00013.safetensors": "205403112bbd92ba8a93d26e7da962ab26683dec79417621d4ef9be7d8bc1985",
+    "model-00010-of-00013.safetensors": "9d3b755ee1c5794b1f6174bccf6ceb518d8c9cd0ce1b22f234f04b4924210dc2",
+    "model-00011-of-00013.safetensors": "d8b083bee13b9858c27c9fa64799910662bc2e16f47a720990da5d96b636995a",
+    "model-00012-of-00013.safetensors": "527bbd67148c1718d028ea1806fa243b7c088ecf80a95f1f1c510b9fc6062eb5"
+  },
+  "tensors": {
+    "backbone.layers.0.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.0.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.0.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.0.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.0.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.0.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.0.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.0.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.11.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.11.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.11.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.11.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.11.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.11.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.11.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.11.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.14.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.14.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.14.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.14.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.14.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.14.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.14.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.14.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.16.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.16.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.16.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.16.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.16.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.16.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.16.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.16.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.18.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.18.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.18.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.18.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.18.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.18.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.18.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.18.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.2.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.2.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.2.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.2.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.2.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.2.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.2.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.2.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.21.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.21.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.21.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.21.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.21.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.21.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.21.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.21.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.23.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.23.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.23.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.23.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.23.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.23.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.23.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.23.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.25.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.25.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.25.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.25.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.25.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.25.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.25.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.25.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.28.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.28.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.28.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.28.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.28.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.28.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.28.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.28.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.30.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.30.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.30.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.30.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.30.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.30.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.30.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.30.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.32.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.32.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.32.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.32.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.32.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.32.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.32.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.32.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.35.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.35.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.35.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.35.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.35.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.35.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.35.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.35.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.37.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.37.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.37.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.37.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.37.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.37.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.37.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.37.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.39.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.39.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.39.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.39.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.39.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.39.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.39.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.39.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.4.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.4.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.4.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.4.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.4.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.4.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.4.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.4.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.41.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.41.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.41.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.41.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.41.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.41.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.41.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.41.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.44.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.44.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.44.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.44.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.44.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.44.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.44.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.44.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.46.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.46.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.46.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.46.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.46.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.46.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.46.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.46.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.48.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.48.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.48.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.48.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.48.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.48.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.48.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.48.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.50.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.50.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.50.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.50.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.50.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.50.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.50.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.50.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.7.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.7.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.7.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.7.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.7.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.7.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.7.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.7.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    },
+    "backbone.layers.9.mixer.A_log": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.9.mixer.D": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.9.mixer.conv1d.bias": {
+      "dtype": "BF16",
+      "shape": [
+        6144
+      ]
+    },
+    "backbone.layers.9.mixer.conv1d.weight": {
+      "dtype": "BF16",
+      "shape": [
+        6144,
+        1,
+        4
+      ]
+    },
+    "backbone.layers.9.mixer.dt_bias": {
+      "dtype": "BF16",
+      "shape": [
+        64
+      ]
+    },
+    "backbone.layers.9.mixer.in_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        10304,
+        2688
+      ]
+    },
+    "backbone.layers.9.mixer.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        4096
+      ]
+    },
+    "backbone.layers.9.mixer.out_proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        2688,
+        4096
+      ]
+    }
+  }
+}
