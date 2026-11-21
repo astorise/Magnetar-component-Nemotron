@@ -13,13 +13,13 @@ or Devices).
 ## Status
 
 The Rust library validates a Nemotron-H hybrid layer pattern and implements a
-standalone float32 reference for the cached Mamba-2 selective-state recurrence.
-The recurrence is tested across three consecutive steps against the upstream
-PyTorch decode branch, including grouped heads, nonzero initial state, time
-step clamping and the learned D skip. Its input is already convolved and
-projected: causal convolution, gated normalization, model graph production,
-weights, WIT exports and complete inference are not implemented. No Nemotron
-checkpoint is yet runnable in Magnetar through this component.
+standalone float32 Mamba-2 mixer reference, including projections, causal
+convolution, grouped recurrent state and gated normalization. Tests compare a
+synthetic small mixer with the pinned NVIDIA PyTorch code, across full prefill,
+cached decoding and chunked continuation, with separate convolution and SSM
+states, reset and failure rollback. The mixer remains a standalone reference:
+model graph production, checkpoint loading, WIT exports and complete inference
+are not implemented. No Nemotron checkpoint is yet runnable in Magnetar.
 
 The parser recognizes `M` (Mamba-2), `*` (attention), `-` (dense MLP) and
 `E` (MoE), and tests the factual 52-layer layout of NVIDIA's Nemotron-3 Nano
