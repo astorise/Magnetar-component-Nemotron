@@ -47,6 +47,20 @@ is a factual subset of its
 [configuration at revision fe4143e](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/fe4143e388795a58a92974891b2e45092a53dc1d/config.json).
 The fixture does not redistribute that checkpoint's weights.
 
+The pinned model source also has a whole-model qualification caveat:
+`NemotronHBlock.forward` calls its attention mixer with `cache_position` but
+does not forward its `cache_params` as `past_key_value` or its attention mask.
+It passes `cache_params` to Mamba, but does not forward the Mamba mask either.
+The attention implementation only updates the attention cache when
+`past_key_value` is supplied. Thus the standalone mixer fixtures do not prove
+the pinned model's mixed-block cached decoding or mask behavior. Reproduce the
+argument check against the exact, SHA-256-verified source without weights or
+PyTorch:
+
+```sh
+python tests/fixtures/check_nano_block_forwarding.py /path/to/modeling_nemotron_h.py
+```
+
 `nano-config.json` is the published configuration at that revision (SHA-256
 `dd9fa380ac107b0477db5a26108db9febe6378e7bb3966a107944853ec4f76f8`).
 `nano-mamba2-headers.json` records only the names, shapes and dtypes of the
