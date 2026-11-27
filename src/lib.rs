@@ -1,8 +1,10 @@
 //! Initial Nemotron-H model component support.
 //!
-//! The layout parser and standalone Mamba-2 mixer reference are not yet
-//! connected to graph exports or a runnable Magnetar inference pipeline.
+//! Includes an experimental mixed-graph producer and standalone numerical
+//! references. Full checkpoint ingestion and end-to-end qualification remain
+//! separate work.
 
+mod graph;
 pub mod layout;
 pub mod mamba2;
 pub mod mamba2_layer;
