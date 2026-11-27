@@ -27,9 +27,11 @@ convolution and SSM have separate Runtime-owned recurrent slots; attention has
 separate KV resources. This f32 graph profile explicitly requires the Nano bias
 flags, sigmoid routing with correction bias, one selected group, normalized
 expert weights and an ungated shared expert. Other declared features fail
-closed. Magnetar's Component-engine test builds prefill and decode graphs for
-a tiny mixed configuration, but this does not establish checkpoint ingestion,
-complete model numerical equivalence, native BF16 or GPU support.
+closed. A companion Magnetar Component-engine test executes a tiny mixed
+configuration and compares full prefill, four cached decode steps, logits,
+recurrent state and KV history with pinned PyTorch primitives. It does not
+establish checkpoint ingestion, full-checkpoint numerical equivalence, native
+BF16 or GPU support.
 
 The pinned NVIDIA `NemotronHBlock` does not forward its cache to attention.
 The experimental graph instead supplies causal attention history explicitly;
