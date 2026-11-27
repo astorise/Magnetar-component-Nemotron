@@ -18,8 +18,25 @@ convolution, grouped recurrent state and gated normalization. Tests compare a
 synthetic small mixer with the pinned NVIDIA PyTorch code, across full prefill,
 cached decoding and chunked continuation, with separate convolution and SSM
 states, reset and failure rollback. The mixer remains a standalone reference:
-model graph production, checkpoint loading, WIT exports and complete inference
-are not implemented. No Nemotron checkpoint is yet runnable in Magnetar.
+checkpoint loading and complete inference are not implemented. No Nemotron
+checkpoint is yet runnable in Magnetar.
+
+An experimental `model-component-graph@1.15.0` producer constructs ordered
+Mamba-2, non-RoPE attention, dense ReLU-squared and routed MoE blocks. Mamba's
+convolution and SSM have separate Runtime-owned recurrent slots; attention has
+separate KV resources. This f32 graph profile explicitly requires the Nano bias
+flags, sigmoid routing with correction bias, one selected group, normalized
+expert weights and an ungated shared expert. Other declared features fail
+closed. Magnetar's Component-engine test builds prefill and decode graphs for
+a tiny mixed configuration, but this does not establish checkpoint ingestion,
+complete model numerical equivalence, native BF16 or GPU support.
+
+The pinned NVIDIA `NemotronHBlock` does not forward its cache to attention.
+The experimental graph instead supplies causal attention history explicitly;
+therefore its cached behavior is not claimed to match that whole-model source.
+The exact reference profile must be settled and independently compared before
+the graph is qualified. Its logical weight names are graph-facing names and
+require an ingestion path to transpose or combine checkpoint tensors as needed.
 
 For the pinned Nano configuration, the library also plans the portable f32
 Mamba-2 mixer's input/output shapes and checkpoint weight transformations. Its
